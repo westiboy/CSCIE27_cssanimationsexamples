@@ -1,0 +1,50 @@
+/*
+
+CSS transforms
+
+Transforms can twist and move the shape of the coordinate space of elements without modifying the document flow (we make them look different, but fundamentally they are not).
+
+*/
+
+.wrapper {
+    margin-top:10em;
+    text-align: center;
+
+    /* applying perspective to a parent element allows all child elements to inherit the same positioning */
+    perspective: 500px;
+}
+
+.shield {
+    margin: 0 auto;
+    height: 400px;
+
+
+    /* Transform functions include translate, scale, rotate, and skew */
+
+    /*transform: translate(200px,200px);*/
+    /*transform: translateX(200px);*/
+    /*transform: skew(10deg,10deg);*/
+    /*transform: rotate(45deg);*/
+    /*transform: scale(0.5);*/
+  
+    /*transform: scale(1,2) rotate(20deg) skew(10deg);*/
+
+   
+    /* 3D transforms */
+
+    /*transform: translate3d(200px,200px,-200px);*/
+    transform: rotateY(45deg);
+
+
+    /* There's also a CSS matrix() transformation that provides granular control to transformations. It's also a bit complex, but know that it exists
+
+    matrix(a, b, c, d, e, f);
+    where a and d affect scale(a,d)
+    b and c are skew(b,c)
+    and e and f are translate (e,f)
+
+    and the 3d version
+    matrix3d(a,b,c,d,e,f,g,h,i);
+
+    */
+}

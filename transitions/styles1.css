@@ -1,0 +1,22 @@
+/* 
+
+CSS Transitions are one way to create animations very simply. These are different than the 'CSS keyframe' animations we'll discuss later, but they are indeed animations. That is, they work to change an object over time. 
+
+With transitions, you control the rate of change as an object changes state. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time, with intermediate steps in between. 
+
+*/
+
+.wrapper {
+    margin-top:10em;
+    text-align: center;
+}
+
+.shield {
+    margin: 0 auto;
+    height: 400px;
+    transition: 1s;
+}
+
+.shield:hover {
+    transform: scale(1.2);
+}

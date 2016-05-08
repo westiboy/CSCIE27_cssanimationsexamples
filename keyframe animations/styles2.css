@@ -1,0 +1,30 @@
+.wrapper {
+	margin: 20em auto 2em auto;
+	width:80%;
+	position:relative;
+}
+
+@keyframes rolling-left-right { 
+    0% { 
+        transform: translateX(100px) rotate(0turn);
+    } 
+    20% { 
+        transform: translateX(-50px) rotate(-0.5turn);
+    } 
+    100% {
+        transform: translateX(500px) rotate(2turn);
+    }
+}
+
+.ball { 
+    width: 100px;
+    animation-name: rolling-left-right; 
+    animation-duration: 5s; 
+    animation-timing-function: ease-in; 
+    animation-iteration-count: 1; 
+    animation-delay: 1s; 
+
+    /* animation-fill-mode is how we can control the object during the time it's NOT being animated. It can take four values: none, backwards, forwards, or both. */
+
+    animation-fill-mode: both;
+}

@@ -1,0 +1,37 @@
+.wrapper {
+	margin: 20em auto 2em auto;
+	width:80%;
+	position:relative;
+}
+
+/*
+
+For any CSS keyframe animation, the first thing we need to do is define the animation itself. This provides the instructions for what should happen in your animation.
+
+The second step is to apply that animation to one or more elements. 
+
+These steps can happen in any order, but many people find it easier to define the animation first, and then assign it to an element afterwards.
+
+*/
+
+@keyframes drive {
+    from {
+          transform: translateX(0);
+      }
+    to {
+         transform: translateX(900px);
+    }
+}
+
+.car {
+	 width: 200px;
+     animation-name: drive;
+     animation-duration: 2s;
+     animation-iteration-count: 10;
+
+     /* animation-fill-mode is how we can control the object during the time it's NOT being animated. It can take four values: none, backwards, forwards, or both. */
+     animation-fill-mode: forwards;
+
+     animation-direction: alternate;
+     animation-timing-function: cubic-bezier(.5,-0.6,.56,1.35);
+}
